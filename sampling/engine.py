@@ -16,6 +16,7 @@ from .samplers.res_multistep_official import sample_step_res_multistep_official
 from .samplers.res_multistep_ancestral import sample_step_res_multistep_ancestral
 from .samplers.heun import sample_step_heun
 from .samplers.gradient_estimation import sample_step_gradient_estimation
+from .mid_segment_gate import decide_skip  # quality gate (mid-segment + band check)
 
 
 def sample_fsampler(model_patcher, noise, sigmas, positive_conditioning, negative_conditioning,
